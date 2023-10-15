@@ -14,6 +14,8 @@ let CookieService = CookieService_1 = class CookieService {
         res.cookie(CookieService_1.tokenKey, token, {
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000,
+            sameSite: "none",
+            secure: true,
         });
     }
     removeToken(res) {
